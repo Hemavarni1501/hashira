@@ -12,7 +12,8 @@ public class PolynomialSolver {
 
     public static void main(String[] args) throws IOException {
 
-        String content = new String(Files.readAllBytes(Paths.get("test.json")));
+        String fileName = args.length > 0 ? args[0] : "test1.json";
+        String content = new String(Files.readAllBytes(Paths.get(fileName)));
 
         int k = extractK(content);
 
